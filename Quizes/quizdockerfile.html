@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="tema" z>Quiz 3 - Dockerfile</title>
+
+    <script defer src="quizes.js"></script>
+    <script defer src="/assets/js/menu.js"></script>
+
+    <link rel="stylesheet" href="quizes.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/godocker.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="burguinho">
+        <img src="../assets/img/burguinho.svg" alt="" onclick="abrirMenu()" />
+      </div>
+      <p>
+        <a href="/DockerMap/dockermap.html"
+          >G<span>o</span>D<span>o</span>cker!</a
+        >
+      </p>
+    </header>
+    <div id="menu" class="escondido">
+      <ul>
+        <li>
+          <a href="/index.html" style="font-family: Poppins-regular">HOME</a>
+        </li>
+        <li>
+          <a
+            href="/DockerMap/dockermap.html"
+            style="font-family: Poppins-regular"
+            >DOCKERMAP</a
+          >
+        </li>
+        <li>
+          <a
+            href="/Exercicios/exercicios.html"
+            style="font-family: Poppins-regular"
+            >EXERCÍCIOS</a
+          >
+        </li>
+        <li>
+          <a href="/Comandos/comandos.html" style="font-family: Poppins-regular"
+            >CADERNO</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <main>
+      <h1>3. Dockerfile</h1>
+
+      <div id="pontos">
+        <h4 class="invisivel">Pontuação Final: <span>0</span></h4>
+      </div>
+
+      <div>
+        <img src="/assets/img/O quiz.png" alt="O quiz" />
+        <img src="/assets/img/whale.png" alt="" />
+      </div>
+      <form action="">
+        <h3>
+          Questão 1 - Qual a vantagem de utilizar um Dockerfile na aplicação?
+        </h3>
+        <div>
+          <div class="questao">
+            <input
+              type="radio"
+              name="question1"
+              value="op1q1"
+              class="questoes"
+            />
+            <label for="op1q1"
+              >Em um determinado ciclo de uma aplicação, ela irá precisar
+              necessarimente de uma série de contêineres e configurações para
+              funcionar completamente. Com o Dockerfile, podemos reproduzir o
+              mesmo projeto, em vários ambientes, mantendo as propriedades, além
+              da configuração desses contêineres ser automatizada com um Script
+              de Dockerfile.
+            </label>
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question1"
+              value="op2q1"
+              class="questoes"
+            />
+            <label for="op2q1"
+              >O Dockerfile é nada mais que um orquestrador de imagens, isso
+              significa que todas as imagens que forem necessárias para manter o
+              bom funcionamento da minha aplicação, estarão configuradas neste
+              ambiente isolado do restante que é o Dockerfile. Isso ajuda na
+              hora da criação de contêineres, pois é necessário chamar o
+              Dockerfile para criar um Script que gerará meu contêiner.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question1"
+              value="op3q1"
+              class="questoes"
+            />
+            <label for="op3q1"
+              >O Dockerfile é apenas útil em cenários onde tenho apenas um
+              contêiner para a minha aplicação, e a sua vantagem de uso é deixar
+              o peso de processamento e memória deste contêiner mais leve e
+              otimizado para a aplicação como um todo. Não é uma boa
+              recomendação utilizar um Dockerfile quando há a necessidade de
+              mais de um contêiner em uma aplicação.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question1"
+              value="op4q1"
+              class="questoes"
+            />
+            <label for="op4q1"
+              >O Dockerfile é um arquivo que contém o conteúdo da aplicação.
+              Todas as dependências do meu código e as bibliotecas necessárias
+              para todas as linguagens que eu estiver utilizando, estarão no
+              Dockerfile. Isso facilita na hora da comunicação com o servidor
+              remoto e no processo de criação de contêineres.</label
+            >
+          </div>
+        </div>
+
+        <h3>
+          Questão 2 - Selecione a opção que contenha comandos do Dockerfile e
+          suas respectivas funções
+        </h3>
+
+        <div>
+          <div class="questao">
+            <input
+              type="radio"
+              name="question2"
+              value="op1q2"
+              class="questoes"
+            />
+            <label for="op1q2"
+              ><strong>FROM</strong> - Cria uma imagem a partir de uma imagem
+              base / <strong>UP</strong> - Executa um script para iniciar o
+              servidor. / <strong>CMD</strong> - Executa um comando.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question2"
+              value="op2q2"
+              class="questoes"
+            />
+            <label for="op2q2"
+              ><strong>CMD</strong> - Executa um comando qualquer /
+              <strong>FROM</strong> - especifica a quantidade de contêineres que
+              serão gerados com o meu Dockerfile / <strong>COPY</strong> - copia
+              arquivos de um espaço para outro diretório
+            </label>
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question2"
+              value="op3q2"
+              class="questoes"
+            />
+            <label for="op3q2">
+              <strong>COPY</strong> - copia arquivos de um diretório para outro
+              / <strong>EXPOSE</strong> - Configura as portas da minha aplicação
+              e normalmente é o último comando do meu Dockerfile /
+              <strong>RUN</strong> - Roda qualquer comando útil para o contexto
+              da minha aplicação
+            </label>
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question2"
+              value="op4q2"
+              class="questoes"
+            />
+            <label for="op4q2"
+              ><strong>COPY</strong> - copia o conteúdo de uma aplicação para a
+              que utilizarei em meu Dockerfile / <strong>EXPOSE</strong> -
+              configura as portas da minha aplicação / <strong>CMD </strong>-
+              Executa o comando para rodar o Scritp do meu Dockerfile
+            </label>
+          </div>
+        </div>
+
+        <h3>Questão 3 - Selecione a opção verdadeira</h3>
+
+        <div>
+          <div class="questao">
+            <input
+              type="radio"
+              name="question3"
+              value="op1q3"
+              class="questoes"
+            />
+            <label for="op1q3"
+              >O conceito de isolamento significa que os ambientes utilizados
+              estarão um dentro do outro, oferecendo uma abstração de camadas
+              maior, fazendo com que a aplicação principal esteja completamente
+              isolada.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question3"
+              value="op2q3"
+              class="questoes"
+            />
+            <label for="op2q3"
+              >O conceito de isolamento significa que os ambientes utilizados
+              estarão cada um em um computador, isolando-as totalmente. Isso
+              quer dizer que você precisará de vários computadores para formar a
+              aplicação principal.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question3"
+              value="op3q3"
+              class="questoes"
+            />
+            <label for="op3q3"
+              >O conceito de isolamento diz respeito a encapsular os ambientes
+              de maneira que os torne independentes um do outro, fazendo com que
+              a aplicação principal não seja afetada totalmente quando houver um
+              imprevisto com algum ambiente. Isso garante uma aplicação mais
+              previsível e confiável.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question3"
+              value="op4q3"
+              class="questoes"
+            />
+            <label for="op4q3"
+              >O isolamento do Docker quer dizer isolar cada etapa de
+              virtualização de contêineres em uma parte do processo, ou seja,
+              virtualizar um ambiente passo a passo.</label
+            >
+          </div>
+          <button id="enviar" type="submit">FINALIZAR QUIZ</button>
+
+          <button id="reiniciar">Reiniciar pontuação</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>GoDocker! - Quiz de Dockerfile</p>
+    </footer>
+  </body>
+</html>

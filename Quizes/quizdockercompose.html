@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="tema">Quiz 4 - Dockercompose</title>
+
+    <script defer src="quizes.js"></script>
+    <script defer src="/assets/js/menu.js"></script>
+
+    <link rel="stylesheet" href="quizes.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/godocker.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="burguinho">
+        <img src="../assets/img/burguinho.svg" alt="" onclick="abrirMenu()" />
+      </div>
+      <p>
+        <a href="/DockerMap/dockermap.html"
+          >G<span>o</span>D<span>o</span>cker!</a
+        >
+      </p>
+    </header>
+    <div id="menu" class="escondido">
+      <ul>
+        <li>
+          <a href="/index.html" style="font-family: Poppins-regular">HOME</a>
+        </li>
+        <li>
+          <a
+            href="/DockerMap/dockermap.html"
+            style="font-family: Poppins-regular"
+            >DOCKERMAP</a
+          >
+        </li>
+        <li>
+          <a
+            href="/Exercicios/exercicios.html"
+            style="font-family: Poppins-regular"
+            >EXERCÍCIOS</a
+          >
+        </li>
+        <li>
+          <a href="/Comandos/comandos.html" style="font-family: Poppins-regular"
+            >CADERNO</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <main>
+      <h1>4. Docker-Compose</h1>
+
+      <div id="pontos">
+        <h4 class="invisivel">Pontuação Final: <span>0</span></h4>
+      </div>
+
+      <div>
+        <img src="/assets/img/O quiz.png" alt="O quiz" />
+        <img src="/assets/img/whale.png" alt="" />
+      </div>
+      <form action="">
+        <h3>Qual papel um Docker-compose desempenha?</h3>
+        <div>
+          <div class="questao">
+            <input
+              type="radio"
+              name="question1"
+              value="op1q1"
+              class="questoes"
+            />
+            <label for="op1q1"
+              >Permite definir e gerenciar aplicativos Docker multi-contêiner
+              através de um arquivo YAML, facilitando a configuração e a
+              orquestração dos serviços necessários para o funcionamento de um
+              aplicativo.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question1"
+              value="op2q1"
+              class="questoes"
+            />
+            <label for="op2q1"
+              >Permite criar imagens Docker a partir de arquivos .exe,
+              automatizando o processo de build e otimizando as etapas de
+              criação de imagens para contêineres.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question1"
+              value="op3q1"
+              class="questoes"
+            />
+            <label for="op3q1"
+              >Fornece uma interface gráfica completa para gerenciar contêineres
+              Docker, permitindo aos usuários visualizar, iniciar, parar e
+              monitorar contêineres diretamente do navegador.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question1"
+              value="op4q1"
+              class="questoes"
+            />
+            <label for="op4q1"
+              >Garante a segurança dos contêineres Docker em ambientes de
+              produção, implementando políticas de segurança e verificações
+              contínuas para evitar vulnerabilidades.</label
+            >
+          </div>
+        </div>
+
+        <h3>
+          Questão 2 - Qual a diferença entre um Dockerfile e um Docker-compose?
+        </h3>
+
+        <div>
+          <div class="questao">
+            <input
+              type="radio"
+              name="question2"
+              value="op1q2"
+              class="questoes"
+            />
+            <label for="op1q2"
+              >Um Dockerfile é um script que contém uma série de instruções para
+              criar uma imagem Docker, enquanto o Docker Compose é uma
+              ferramenta para definir e gerenciar aplicativos multi-contêiner
+              usando um arquivo YAML.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question2"
+              value="op2q2"
+              class="questoes"
+            />
+            <label for="op2q2"
+              >Um Dockerfile é usado para configurar redes e volumes Docker,
+              enquanto o Docker Compose é utilizado para construir imagens
+              Docker a partir de código-fonte.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question2"
+              value="op3q2"
+              class="questoes"
+            />
+            <label for="op3q2"
+              >Um Dockerfile define a infraestrutura necessária para rodar um
+              aplicativo em produção, enquanto o Docker Compose é utilizado
+              apenas para desenvolvimento local.
+            </label>
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question2"
+              value="op4q2"
+              class="questoes"
+            />
+            <label for="op4q2"
+              >Um Dockerfile é um arquivo de configuração para orquestrar
+              serviços em clusters Kubernetes, enquanto o Docker Compose é uma
+              ferramenta que converte contêineres Docker em máquinas virtuais.
+            </label>
+          </div>
+        </div>
+
+        <h3>
+          Questão 3 - Qual tipo de arquivo o Docker-compose trabalha e suas
+          características?
+        </h3>
+
+        <div>
+          <div class="questao">
+            <input
+              type="radio"
+              name="question3"
+              value="op1q3"
+              class="questoes"
+            />
+            <label for="op1q3"
+              >O Docker Compose trabalha com arquivos JSON, que são usados para
+              definir a estrutura de diretórios e permissões de acesso dentro
+              dos contêineres.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question3"
+              value="op2q3"
+              class="questoes"
+            />
+            <label for="op2q3"
+              >O Docker Compose trabalha com arquivos YAML, que permitem
+              descrever os serviços, redes e volumes necessários para a
+              aplicação de forma declarativa e legível. Sua organização se dá
+              organizando Informações hierarquicamente com recuo.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question3"
+              value="op3q3"
+              class="questoes"
+            />
+            <label for="op3q3"
+              >O Docker Compose trabalha com arquivos XML, que são utilizados
+              para configurar a segurança e criptografia dos dados armazenados
+              nos contêineres.</label
+            >
+          </div>
+
+          <div class="questao">
+            <input
+              type="radio"
+              name="question3"
+              value="op4q3"
+              class="questoes"
+            />
+            <label for="op4q3"
+              >O Docker Compose trabalha com arquivos INI, que especificam as
+              variáveis de ambiente e as dependências externas dos contêineres
+              Docker.</label
+            >
+          </div>
+          <button id="enviar" type="submit">FINALIZAR QUIZ</button>
+
+          <button id="reiniciar">Reiniciar pontuação</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>GoDocker! - Significado de Docker</p>
+    </footer>
+  </body>
+</html>

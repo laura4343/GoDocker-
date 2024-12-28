@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoDocker! - Caderno de Comandos</title>
+
+    <link rel="stylesheet" href="comandos.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/godocker.svg"
+      type="image/x-icon"
+    />
+
+    <script src="comandos.js" defer></script>
+    <script defer src="/assets/js/menu.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="burguinho">
+        <img src="../assets/img/burguinho.svg" alt="" onclick="abrirMenu()" />
+      </div>
+      <p>
+        <a href="/DockerMap/dockermap.html"
+          >G<span>o</span>D<span>o</span>cker!</a
+        >
+      </p>
+    </header>
+    <div id="menu" class="escondido">
+      <ul>
+        <li>
+          <a href="/index.html" style="font-family: Poppins-regular">HOME</a>
+        </li>
+        <li>
+          <a
+            href="/DockerMap/dockermap.html"
+            style="font-family: Poppins-regular"
+            >DOCKERMAP</a
+          >
+        </li>
+        <li>
+          <a
+            href="/Exercicios/exercicios.html"
+            style="font-family: Poppins-regular"
+            >EXERCÍCIOS</a
+          >
+        </li>
+        <li>
+          <a href="/Comandos/comandos.html" style="font-family: Poppins-regular"
+            >CADERNO</a
+          >
+        </li>
+      </ul>
+      <img src="../assets/img/whale.png" alt="" class="whalemenu" />
+    </div>
+    <main>
+      <h1>Caderno de Comandos</h1>
+
+      <img id="caderno-icon" src="/assets/img/caderno-icon.png" alt="" />
+      <pesquisa>
+        <label for="search"
+          >Pesquise uma funcionalidade e descubra seu comando</label
+        >
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Ex: rodar imagem"
+        />
+      </pesquisa>
+
+      <article class="conteudo-box">
+        <h2>Comandos gerais</h2>
+
+        <p>
+          Comandos sobre imagem, contêiner, dockerfile e docker-compose, além de
+          significado de atributos e parâmetros estarão aqui!
+        </p>
+
+        <div id="comando1" class="comando">
+          <div class="comand-title">Listar imagens</div>
+          <code> docker images </code>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">Baixar imagens</div>
+          <code> docker pull &lt;imagem&gt; </code>
+          <div class="example-command">
+            Exemplo instalando Ubuntu: docker pull ubuntu
+          </div>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">Remover imagem</div>
+          <code> docker rmi &lt;imagem_id_ou_nome&gt; </code>
+          <div class="example-command">
+            Exemplo removendo Ubuntu: docker rmi ubuntu
+          </div>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">Histórico de execuções</div>
+          <code> docker container ls -a </code>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">Lista de execuções</div>
+          <code>docker ps</code>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">
+            Informações sobre um contêiner em execução
+          </div>
+          <code>docker inspect</code>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">
+            Executar comandos em um contêiner em execução
+          </div>
+          <code>docker exec &lt;nomeContêiner&gt; bash</code>
+
+          <div class="example-command">
+            O comando docker exec -it caixa bash abre um ambiente bash para
+            manuseamento do contêiner "caixa"
+          </div>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">Rodar imagens</div>
+          <code>docker run</code>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">Listar as portas de um contêiner</div>
+          <code>docker port &lt;idDoContêiner&gt;</code>
+          <div class="example-command">docker port 8czeb3274</div>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">
+            Mapear automaticamente as portas de um contêiner
+          </div>
+          <code>-P</code>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">
+            Mapear manualmente as portas de um contêiner
+          </div>
+          <code>-p</code>
+          <div class="example-command">
+            docker run -d -p 8080:80 dockersamples/static-site
+          </div>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">Rodar um docker-compose</div>
+          <code>docker-compose up;</code>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">
+            Status dos contêineres de um docker-compose em execução
+          </div>
+          <code>docker-compose ps;</code>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">
+            Rodar um único serviço do docker-compose
+          </div>
+          <code>docker-compose run service_name </code>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">
+            Parâmetro para interagir com o terminal (junção de -i + -t)
+          </div>
+          <code>-it</code>
+          <div class="example-command">docker run -it ubuntu bash</div>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">Ambiente da interação</div>
+          <code>bash</code>
+          <div class="example-command">docker run -it ubuntu bash</div>
+        </div>
+
+        <div class="comando">
+          <div class="comand-title">Logar no Dockerhub com terminal</div>
+          <code>docker login docker.io</code>
+        </div>
+
+        <div id="texto-nulo" class="comando">Nenhum resultado encontrado.</div>
+      </article>
+    </main>
+    <footer>
+      <p>GoDocker! - Caderno de Comandos</p>
+    </footer>
+  </body>
+</html>

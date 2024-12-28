@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoDocker! - DockerMap</title>
+    <link rel="stylesheet" href="dockermap.css" />
+    <link rel="stylesheet" href="dockermap2.css" />
+    <script src="dockermap.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="/assets/img/godocker.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="burguinho">
+        <img src="../assets/img/burguinho.svg" alt="" onclick="abrirMenu()" />
+      </div>
+      <p>
+        <a href="/DockerMap/dockermap.html"
+          >G<span>o</span>D<span>o</span>cker!</a
+        >
+      </p>
+    </header>
+    <div id="menu" class="escondido">
+      <ul>
+        <li>
+          <a href="/index.html" style="font-family: Poppins-regular">HOME</a>
+        </li>
+        <li>
+          <a
+            href="/DockerMap/dockermap.html"
+            style="font-family: Poppins-regular"
+            >DOCKERMAP</a
+          >
+        </li>
+        <li>
+          <a
+            href="/Exercicios/exercicios.html"
+            style="font-family: Poppins-regular"
+            >EXERCÍCIOS</a
+          >
+        </li>
+        <li>
+          <a href="/Comandos/comandos.html" style="font-family: Poppins-regular"
+            >CADERNO</a
+          >
+        </li>
+      </ul>
+    </div>
+    <main>
+      <div id="Wrapper">
+        <div id="texts">
+          <h2>Vamos ao trabalho</h2>
+          <p>
+            Selecione a opção que melhor condizer com o seu nível de
+            conhecimento. Se for um iniciante, comece pela Largada!
+          </p>
+          <div id="UserPath">
+            <img
+              id="containerImg"
+              src="/assets/img/containerPage.png"
+              alt="container"
+            />
+            <a href="/OqueDocker/oqueedocker.html">
+              <img
+                id="WhatIsDocker"
+                src="/assets/img/WhatIsDocker.png"
+                alt="WhatIsDocker"
+              />
+            </a>
+            <a href="/Imagem, Contêiner e Hub/imageconteinerdockerhub.html">
+              <img
+                id="ImageAndContainer"
+                src="/assets/img/ImageAndContainer.png"
+                alt="imageAndContainer"
+              />
+            </a>
+            <a href="/Dockerfile/dockerfilepage.html">
+              <img
+                id="DockerFile"
+                src="/assets/img/DockerFile.png"
+                alt="DockerFile"
+              />
+            </a>
+            <a href="/DockerCompose/dockercompose.html">
+              <img
+                id="DockerCompose"
+                src="/assets/img/DockerCompose.png"
+                alt="DockerCompose"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p style="font-family: Jua">GoDocker! - DockerMap</p>
+    </footer>
+  </body>
+</html>
